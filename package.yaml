@@ -1,0 +1,69 @@
+name: servant-tutorial
+version: '0.1.0.0'
+author: Author name here
+maintainer: author@earnestresearch.com
+copyright: 2018 Earnest Research
+license: BSD3
+homepage: https://github.com/EarnestResearch/servant-tutorial
+
+dependencies:
+  - aeson
+  - base
+  - bytestring
+  - ekg
+  - ekg-core
+  - servant-server
+  - text
+  - wai
+  - wai-extra
+  - wai-middleware-metrics
+  - warp
+  - safe
+  - monad-logger
+  - safe
+  - monad-metrics
+  - mtl
+  - persistent
+  - persistent-postgresql
+  - persistent-template
+  - transformers
+  - fast-logger
+  - katip
+
+default-extensions:
+  - BangPatterns
+  - DataKinds
+  - DefaultSignatures
+  - DeriveDataTypeable
+  - GeneralizedNewtypeDeriving
+  - LambdaCase
+  - OverloadedLabels
+  - OverloadedLists
+  - OverloadedStrings
+  - PartialTypeSignatures
+  - PatternSynonyms
+  - QuasiQuotes
+  - RecordWildCards
+  - ScopedTypeVariables
+  - TemplateHaskell
+  - TypeOperators
+  - ViewPatterns
+
+library:
+  source-dirs: src
+  ghc-options:
+    - -Wall
+    - -fno-warn-type-defaults
+
+executables:
+  servant-tutorial:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+      - -Wall
+      - -fno-warn-type-defaults
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - servant-tutorial
